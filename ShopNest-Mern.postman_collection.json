@@ -1,0 +1,529 @@
+{
+  "info": {
+    "_postman_id": "37c3ddb0-3ae1-446a-8c5a-d1abcf7a11a7",
+    "name": "ShopNest-Mern",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52164755",
+    "_collection_link": "https://go.postman.co/collection/52164755-37c3ddb0-3ae1-446a-8c5a-d1abcf7a11a7?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "AUTH",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"sahil\",\r\n    \"email\":\"reshi22@gmail.com\",\r\n    \"password\":\"sahil123\"\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{endpoint}}/api/auth/register",
+              "host": [
+                "{{endpoint}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"reshi22@gmail.com\",\r\n    \"password\":\"sahil123\"\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{endpoint}}/api/auth/login",
+              "host": [
+                "{{endpoint}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ADMIN get all users",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "New Request",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get all products",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Admin--Edit single Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ADMIN_TOKEN"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "key": "name",
+                  "value": "Updated Headphones"
+                },
+                {
+                  "type": "text",
+                  "key": "description",
+                  "value": "Updated Bluetooth headphones"
+                },
+                {
+                  "type": "text",
+                  "key": "price",
+                  "value": "59.99"
+                },
+                {
+                  "type": "text",
+                  "key": "category",
+                  "value": "Electronics"
+                },
+                {
+                  "type": "text",
+                  "key": "stock",
+                  "value": "30"
+                },
+                {
+                  "type": "file",
+                  "key": "image",
+                  "src": "C:/path/to/headphones.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products/PRODUCT_ID",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products",
+                "PRODUCT_ID"
+              ]
+            },
+            "description": "Generated from cURL: curl --location --request PUT \"http://localhost:5000/api/products/PRODUCT_ID\" --header \"Authorization: Bearer YOUR_ADMIN_TOKEN\" --form \"name=Updated Headphones\" --form \"description=Updated Bluetooth headphones\" --form \"price=59.99\" --form \"category=Electronics\" --form \"stock=30\" --form \"image=@C:/path/to/headphones.jpg\""
+          },
+          "response": []
+        },
+        {
+          "name": "Admin--Edit single Product Copy",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ADMIN_TOKEN"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "key": "name",
+                  "value": "Updated Headphones"
+                },
+                {
+                  "type": "text",
+                  "key": "description",
+                  "value": "Updated Bluetooth headphones"
+                },
+                {
+                  "type": "text",
+                  "key": "price",
+                  "value": "59.99"
+                },
+                {
+                  "type": "text",
+                  "key": "category",
+                  "value": "Electronics"
+                },
+                {
+                  "type": "text",
+                  "key": "stock",
+                  "value": "30"
+                },
+                {
+                  "type": "file",
+                  "key": "image",
+                  "src": "C:/path/to/headphones.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products/PRODUCT_ID",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products",
+                "PRODUCT_ID"
+              ]
+            },
+            "description": "Generated from cURL: curl --location --request PUT \"http://localhost:5000/api/products/PRODUCT_ID\" --header \"Authorization: Bearer YOUR_ADMIN_TOKEN\" --form \"name=Updated Headphones\" --form \"description=Updated Bluetooth headphones\" --form \"price=59.99\" --form \"category=Electronics\" --form \"stock=30\" --form \"image=@C:/path/to/headphones.jpg\""
+          },
+          "response": []
+        },
+        {
+          "name": "Admin-- Create new products",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ADMIN_TOKEN"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "type": "text",
+                  "key": "name",
+                  "value": "Wireless Headphones"
+                },
+                {
+                  "type": "text",
+                  "key": "description",
+                  "value": "Bluetooth wireless headphones"
+                },
+                {
+                  "type": "text",
+                  "key": "price",
+                  "value": "49.99"
+                },
+                {
+                  "type": "text",
+                  "key": "category",
+                  "value": "Electronics"
+                },
+                {
+                  "type": "text",
+                  "key": "stock",
+                  "value": "25"
+                },
+                {
+                  "type": "file",
+                  "key": "image",
+                  "src": "C:/path/to/headphones.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "products"
+              ]
+            },
+            "description": "Generated from cURL: curl --location \"http://localhost:5000/api/products\" ^\n--header \"Authorization: Bearer YOUR_ADMIN_TOKEN\" ^\n--form \"name=Wireless Headphones\" ^\n--form \"description=Bluetooth wireless headphones\" ^\n--form \"price=49.99\" ^\n--form \"category=Electronics\" ^\n--form \"stock=25\" ^\n--form \"image=@C:/path/to/headphones.jpg\""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "place order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"items\":[{\"product\":\"PRODUCT_ID\",\"quantity\":2,\"price\":49.99}],\"totalAmount\":99.98,\"address\":\"123 Main Street, City\",\"paymentId\":\"PAYMENT_ID\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            },
+            "description": "Generated from cURL: curl --location \"http://localhost:5000/api/orders\" --header \"Authorization: Bearer YOUR_TOKEN\" --header \"Content-Type: application/json\" --data \"{\\\"items\\\":[{\\\"product\\\":\\\"PRODUCT_ID\\\",\\\"quantity\\\":2,\\\"price\\\":49.99}],\\\"totalAmount\\\":99.98,\\\"address\\\":\\\"123 Main Street, City\\\",\\\"paymentId\\\":\\\"PAYMENT_ID\\\"}\""
+          },
+          "response": []
+        },
+        {
+          "name": "Admin-All orders",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"items\":[{\"product\":\"PRODUCT_ID\",\"quantity\":2,\"price\":49.99}],\"totalAmount\":99.98,\"address\":\"123 Main Street, City\",\"paymentId\":\"PAYMENT_ID\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            },
+            "description": "Generated from cURL: curl --location \"http://localhost:5000/api/orders\" --header \"Authorization: Bearer YOUR_TOKEN\" --header \"Content-Type: application/json\" --data \"{\\\"items\\\":[{\\\"product\\\":\\\"PRODUCT_ID\\\",\\\"quantity\\\":2,\\\"price\\\":49.99}],\\\"totalAmount\\\":99.98,\\\"address\\\":\\\"123 Main Street, City\\\",\\\"paymentId\\\":\\\"PAYMENT_ID\\\"}\""
+          },
+          "response": []
+        },
+        {
+          "name": "update- Order Status",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"items\":[{\"product\":\"PRODUCT_ID\",\"quantity\":2,\"price\":49.99}],\"totalAmount\":99.98,\"address\":\"123 Main Street, City\",\"paymentId\":\"PAYMENT_ID\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            },
+            "description": "Generated from cURL: curl --location \"http://localhost:5000/api/orders\" --header \"Authorization: Bearer YOUR_TOKEN\" --header \"Content-Type: application/json\" --data \"{\\\"items\\\":[{\\\"product\\\":\\\"PRODUCT_ID\\\",\\\"quantity\\\":2,\\\"price\\\":49.99}],\\\"totalAmount\\\":99.98,\\\"address\\\":\\\"123 Main Street, City\\\",\\\"paymentId\\\":\\\"PAYMENT_ID\\\"}\""
+          },
+          "response": []
+        },
+        {
+          "name": "MY orders",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"items\":[{\"product\":\"PRODUCT_ID\",\"quantity\":2,\"price\":49.99}],\"totalAmount\":99.98,\"address\":\"123 Main Street, City\",\"paymentId\":\"PAYMENT_ID\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            },
+            "description": "Generated from cURL: curl --location \"http://localhost:5000/api/orders\" --header \"Authorization: Bearer YOUR_TOKEN\" --header \"Content-Type: application/json\" --data \"{\\\"items\\\":[{\\\"product\\\":\\\"PRODUCT_ID\\\",\\\"quantity\\\":2,\\\"price\\\":49.99}],\\\"totalAmount\\\":99.98,\\\"address\\\":\\\"123 Main Street, City\\\",\\\"paymentId\\\":\\\"PAYMENT_ID\\\"}\""
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Analytics",
+      "item": [
+        {
+          "name": "Admin: Analytics",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"items\":[{\"product\":\"PRODUCT_ID\",\"quantity\":2,\"price\":49.99}],\"totalAmount\":99.98,\"address\":\"123 Main Street, City\",\"paymentId\":\"PAYMENT_ID\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "orders"
+              ]
+            },
+            "description": "Generated from cURL: curl --location \"http://localhost:5000/api/orders\" --header \"Authorization: Bearer YOUR_TOKEN\" --header \"Content-Type: application/json\" --data \"{\\\"items\\\":[{\\\"product\\\":\\\"PRODUCT_ID\\\",\\\"quantity\\\":2,\\\"price\\\":49.99}],\\\"totalAmount\\\":99.98,\\\"address\\\":\\\"123 Main Street, City\\\",\\\"paymentId\\\":\\\"PAYMENT_ID\\\"}\""
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "endpoint",
+      "value": ""
+    }
+  ]
+}
